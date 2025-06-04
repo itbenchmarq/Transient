@@ -1,0 +1,39 @@
+id,title,description,tags,extra_fields
+6,All servers behind a firewall.,"<ul>
+
+<li>All servers in the {{ client.name }} environment are behind some type of firewall. This includes a NAT gateway (no public IPs assigned and reachable), a Web Application Firewall (WAF), or a cloud based security group.</li>
+
+</ul>",,"{""type"": ""Strength""}"
+7,Clean up stale objects and devices,"<ul>
+
+<li>Numerous stale objects exist within the environment. Consider cleaning up both Active Directory and Entra ID by deleting devices that no longer exist, are no longer domain joined, or users that are no longer with the organization for a significant period of time.</li>
+
+</ul>",,"{""type"": ""Weakness""}"
+5,Implement/Ingest Logging and Alerting,"<ul>
+
+<li>While logging is enabled across various systems within {{ client.name }}, the logs are not currently being ingested into a centralized SIEM. Without centralized collection, correlation, and alerting, critical security events may go undetected or delayed in response. Integrating logs into a SIEM would enhance visibility, support faster incident detection, and enable more effective threat response and forensic analysis.</li>
+
+</ul>",,"{""type"": ""Weakness""}"
+4,Implement Tiered Accounts,"<ul>
+<li>{{ client.name }} currently has implement a tiered administrative model, resulting in a secure segmentation of standard user accounts from privileged accounts. This practice decreases the risk of credential compromise and lateral movement, as high-privilege accounts are more frequently exposed during day-to-day operations. </li>
+</ul>",,"{""type"": ""Strength""}"
+1,Multifactor Authentication (MFA),"<ul>
+
+<li>MFA has been comprehensively enforced for all user accounts within the organization, representing a significant strength in its overall security posture. The implementation of MFA provides a critical layer of protection by requiring additional verification beyond standard credentials, substantially reducing the risk of unauthorized access due to phishing, credential theft, or other common threat vectors. This approach reflects the organization’s proactive commitment to identity security and effective access control.</li>
+
+</ul>",,"{""type"": ""Strength""}"
+2,Password Management,"<ul>
+
+<li>Password policy: {{ client.name }} has set password policies using Microsoft’s Fine-Grained Password Policies to establish password criteria based on account type – standard user, privileged user, service account. The established password policies meet recommended baselines and make it more difficult for hashed passwords to be abused by attackers.</li>
+
+</ul>",,"{""type"": ""Strength""}"
+3,Supported Operating Systems,"<ul>
+
+<li>The assessment confirmed that no legacy or end-of-life operating systems are in use across the {{ client.name }} environment. All systems are running supported versions with ongoing vendor security updates, significantly reducing the risk associated with unpatched vulnerabilities and unsupported software. This demonstrates strong lifecycle management practices and a commitment to maintaining a secure and modern infrastructure.</li>
+
+</ul>",,"{""type"": ""Strength""}"
+8,Zero Trust Principles in Use,"<ul>
+
+<li>{{ client.name }} is actively embracing Zero Trust principles to enhance its security posture across all environments. By enforcing identity verification for every access request, implementing least privilege access, and continuously monitoring user and device behavior, {{ client.name }} ensures that trust is never assumed and access is always verified. This proactive approach reduces the attack surface, mitigates insider threats, and strengthens defenses against evolving cyber threats.</li>
+
+</ul>",,"{""type"": ""Strength""}"
